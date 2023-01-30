@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="content">Enter content:</label><br>
+        <textarea name="content" id="content"></textarea><br>
+
+        <label for="action">Encrypt or Decrypt:</label>
+        <select name="action">
+            <option value="1">Encrypt</option>
+            <option value="2">Decrypt</option>
+        </select>
+        <br><br>
+
+        <label for="key">Key (only needed for decryption):</label><br>
+        <input type="text" id="key" name="key"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
